@@ -1,0 +1,378 @@
+*{
+    box-sizing: border-box;
+    
+}
+html {
+    scroll-behavior: smooth;
+  }
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    color: rgb(85, 85, 85);
+    font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+    text-align: center;
+    cursor: none;
+    overflow-x: hidden;
+}
+.navbar{
+    width: 100%;
+    position: fixed;
+    z-index: 100;   
+    text-align: center;
+
+}
+.jls-nav{
+    background: rgba(255, 255, 255, 0.733);
+    box-shadow: 1px 1px 5px rgb(94, 94, 94);
+    width: 75%;
+    height: 75px;
+    text-align: center;
+    margin: 0 auto;
+
+}
+.jls-nav a {
+    text-decoration: none;
+    color: #333 ;
+    
+}
+.jls-hover {
+    transition: all 0.3s ease;
+    padding: 20px 0;
+}
+span{
+    pointer-events: none;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: black;
+    transition: transform 0.1s linear;
+}
+
+.cursor{
+    pointer-events: none;
+    position: fixed;
+    padding: 0.3rem;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    mix-blend-mode: difference;
+    transition: transform 0.3s ease;
+}
+.jls-hover:hover ~ .cursor{
+    transform: translate(-50%, -50%) scale(8);
+}
+
+.section h1{
+    color: #111;
+    font-size: 200px;
+    margin: 0 0 30px;
+   line-height: 50px;
+    font-weight: normal;
+}
+.section2 p{
+    font-size: 2rem;
+    position: relative;
+    right: 50px;
+}
+
+
+
+
+
+.section .t2 ,.section .t3{
+    color: rgba(51, 51, 51, 0.13);
+}
+p{
+    margin: 0;
+}
+.section1{
+    background: url('../img/bg.jpg');
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+
+    
+}
+
+.section1 .mylogo{
+
+    width: 25%;
+    background: rgba(255, 255, 255, 0.712);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    animation: logoanim 2s linear infinite;
+    box-shadow: 1px 1px 5px rgb(94, 94, 94);
+}
+@keyframes logoanim{
+    0%{
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.281),  0 0 0 0 rgba(255, 255, 255, 0.281)  ;
+    }
+    30%{
+        box-shadow: 0 0 0 50px  rgba(255, 255, 255, 0), 0 0 0 0 rgba(255, 255, 255, 0.281);
+    }
+    65%{
+        box-shadow: 0 0 0 50px  rgba(255, 255, 255, 0), 0 0 0 30px rgba(255, 255, 255, 0);
+    }
+    100%{
+        box-shadow: 0 0 0 0  rgba(255, 255, 255, 0), 0 0 0 30px rgba(255, 255, 255, 0);
+    }
+}
+@keyframes fontsize{
+    0%{
+        font-size: 50px;
+    }
+    30%{
+        font-size: 80px;
+    }
+    65%{
+        font-size: 90px;
+
+    }
+    100%{
+        font-size: 100px;
+
+    }
+}
+.caret{
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    margin: 0;
+    padding: 0;
+    translate: -50% -50%;
+    animation: caret 1s ease-in-out infinite;
+}
+.caret .fa{
+    font-size: 5rem;
+    color:  rgba(255, 255, 255, 0.712);
+    margin: 0;
+    padding: 0;
+}
+@keyframes caret{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.entete{
+    height: 75px;
+
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    
+}
+.container-boule{
+    position: relative;
+    grid-row-start: 2;
+    grid-column-start: 2;
+}
+.titre{
+    grid-row-start: 2;
+}
+.presentation{
+    grid-column-start: 3;
+    grid-row-start: 1;
+    position: absolute;
+    right: 0;
+    top: 25%;
+    font-size: 50px;
+}
+ .contenu{
+     grid-column-start: 3;
+    grid-row-start: 2;
+}
+.contenu h1{
+    font-size: 100px;
+}
+.section2{
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
+    -webkit-animation: bg-scrolling-reverse .92s infinite;
+  /* Safari 4+ */
+  -moz-animation: bg-scrolling-reverse .92s infinite;
+  /* Fx 5+ */
+  -o-animation: bg-scrolling-reverse .92s infinite;
+  /* Opera 12+ */
+  animation: bg-scrolling-reverse .92s infinite;
+  /* IE 10+ */
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear; 
+}
+.section3{
+    background: url("../img/section3.jpg") no-repeat fixed;
+    position: sticky;
+    background-size: cover;
+    background-position: center;
+
+    overflow: hidden;
+
+}
+.profil{
+    display: grid;
+    position: absolute;
+    z-index: 300;
+    top: 30%;
+    left: 
+    60%;
+    line-height: 5rem;
+}
+.ombre{
+    display: grid;
+    position: absolute;
+    z-index: 299;
+    top: 40%;
+    left: 75%;
+    line-height: 5rem;
+    color: rgba(255, 255, 255, 0.233);
+
+ 
+}
+.profil .procontent1,
+.profil .procontent2,
+.profil .procontent3,
+.profil .procontent4,
+.profil .procontent5
+{
+    background: rgba(255, 255, 255, 0.89);
+}
+.profil .procontent1, .ombre .procontent1{
+
+    font-size: 5rem;
+    transform: rotate(10deg);
+} 
+.profil .procontent2, .ombre .procontent2{
+
+    font-size: 2rem;
+     transform: rotate(-10deg);
+} 
+
+.profil .procontent3, .ombre .procontent3{
+
+    font-size: 3rem;
+     transform: rotate(6deg);
+} 
+
+.profil .procontent4, .ombre .procontent4{
+
+    font-size: 5rem;
+     transform: rotate(8deg);
+} 
+.profil .procontent5, .ombre .procontent5{
+
+    font-size: 1.5rem;
+     transform: rotate(-5deg);
+} 
+
+.ombre{
+
+}
+.section4{
+    background: #ffffff;
+}
+.slide .competance{
+    position: absolute;
+    top: 50%;
+    left: 400px;
+    
+}
+.slide .competance span{
+   font-size: 50px;
+}
+.slide .competance .span1{
+    animation: fontsize 10s infinite;
+}
+.slide .competance .span2{
+    animation: fontsize 2s infinite;
+}
+.slide .competance .span3{
+    animation: fontsize 4s infinite;
+}
+.slide .competance .span4{
+    animation: fontsize 6s infinite;
+}
+.slide .competance .span5{
+    animation: fontsize 9s infinite;
+}
+.slide .competance .span6{
+    animation: fontsize 8s infinite;
+}
+.slide .competance .span7{
+    animation: fontsize 7s infinite;
+}
+.slide .competance .span8{
+    animation: fontsize 6s infinite;
+}
+.slide .competance .span9{
+    animation: fontsize 3s infinite;
+}
+.slide .competance .span10{
+    animation: fontsize 5s infinite;
+}
+.slide .competance span:hover{
+   color: brown;
+}
+.section4 .titre .t1, .section4 .titre .t2, .section4 .titre .t3{
+    font-size: 100px;
+}
+
+.section5{
+    background: #ffffff;
+}
+
+/* anim bg section2 */
+
+@-webkit-keyframes bg-scrolling-reverse {
+    100% {
+      background-position: 50px 50px; } }
+  @-moz-keyframes bg-scrolling-reverse {
+    100% {
+      background-position: 50px 50px; } }
+  @-o-keyframes bg-scrolling-reverse {
+    100% {
+      background-position: 50px 50px; } }
+  @keyframes bg-scrolling-reverse {
+    100% {
+      background-position: 50px 50px; } }
+  @-webkit-keyframes bg-scrolling {
+    0% {
+      background-position: 50px 50px; } }
+  @-moz-keyframes bg-scrolling {
+    0% {
+      background-position: 50px 50px; } }
+  @-o-keyframes bg-scrolling {
+    0% {
+      background-position: 50px 50px; } }
+  @keyframes bg-scrolling {
+    0% {
+      background-position: 50px 50px; } }
+/* fin anim bg sct2 */
+@media (min-width: 900px){
+    nav{
+        display: flex;
+        justify-content: space-around;
+    }
+}
+@media (max-width: 900px){
+    nav {
+        top : 30%;
+    }
+
+    .jls-hover{
+        width: 100%;
+        padding: 20px 0;
+        display: inline-block;
+    }
+}
